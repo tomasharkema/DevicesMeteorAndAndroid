@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Devices-Android</string>
+    <string name="title_activity_device_detail">DeviceDetail</string>
+</resources>

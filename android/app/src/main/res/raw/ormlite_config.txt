@@ -1,0 +1,35 @@
+#
+# generated on 2015/11/22 09:51:40
+#
+# --table-start--
+dataClass=in.harkema.devices_android.storage.Device
+tableName=device
+# --table-fields-start--
+# --field-start--
+fieldName=id
+columnName=id
+generatedId=true
+# --field-end--
+# --field-start--
+fieldName=_id
+columnName=_id
+# --field-end--
+# --field-start--
+fieldName=name
+columnName=name
+# --field-end--
+# --field-start--
+fieldName=type
+columnName=type
+# --field-end--
+# --field-start--
+fieldName=status
+columnName=status
+# --field-end--
+# --field-start--
+fieldName=description
+columnName=description
+# --field-end--
+# --table-fields-end--
+# --table-end--
+#################################

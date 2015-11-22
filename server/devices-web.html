@@ -1,0 +1,68 @@
+<head>
+    <title>devices-web</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+  {{> deviceList}}
+  {{> add}}
+  {{> deviceDetail}}
+</body>
+
+<template name="deviceList">
+    <div data-role="page" id="device-list">
+        <div data-role="header">
+            <h1>Devices</h1>
+            <a href="#add" class="ui-btn-left ui-btn ui-btn-inline ui-mini ui-corner-all ui-btn-icon-left ui-icon-plus">Add</a>
+        </div><!-- /header -->
+
+        <div role="main" class="ui-content">
+            <ul data-role="listview" id="deviceList">
+              {{#each devices}}
+                  <li>
+                      <a href="#device-detail?deviceId={{_id}}">
+                          <h1>{{name}}</h1>
+                      </a>
+                  </li>
+              {{/each}}
+            </ul>
+        </div><!-- /content -->
+    </div>
+</template>
+
+<template name="add">
+    <div data-role="page" id="add">
+        <div data-role="header">
+            <h1>Voeg film toe</h1>
+        </div><!-- /header -->
+
+        <div role="main" class="ui-content">
+            <label for="name">Name:</label>
+            <input type="text" id="name"><br>
+            <label for="desc">Description:</label>
+            <textarea id="desc"></textarea>
+            <label for="type">Type:</label>
+            <select name="type" id="type">
+                {{#each types}}
+                    <option value="{{key}}">{{name}}</option>
+                {{/each}}
+            </select><br>
+
+            <input type="submit" id="add-submit" value="Save">
+        </div><!-- /content -->
+    </div>
+</template>
+
+<template name="deviceDetail">
+    <div data-role="page" id="device-detail">
+        <div data-role="header">
+            <h1>{{device.name}}</h1>
+            <a href="#remove" class="ui-btn-left ui-btn ui-btn-inline ui-mini ui-corner-all ui-btn-icon-left ui-icon-delete" id="remove">Remove</a>
+        </div><!-- /header -->
+        <div role="main" class="ui-content">
+            <h1>{{device.name}}</h1>
+            <small><strong>{{type}}</strong></small>
+            <p>{{device.description}}</p>
+        </div>
+    </div>
+</template>
