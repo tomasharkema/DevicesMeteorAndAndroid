@@ -26,5 +26,7 @@ proguard/
 # Log Files
 *.log
 
+.idea
+
 .meteor/local
 .meteor/meteorite
